@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Timer</title>
+</head>
+<body>
+    <div class="card" role="main">
+  <h1>
+    ⏳ Countdown Timer
+    <small></small>
+  </h1>
+
+  <!-- event form -->
+  <div class="event-form">
+    <div class="field-group">
+      <label for="eventName">Event name</label>
+      <input type="text" id="eventName" placeholder="e.g. Birthday" value="New Year">
+    </div>
+    <div class="field-group">
+      <label for="eventDate">Date</label>
+      <input type="date" id="eventDate" value="2026-12-31">
+    </div>
+    <div class="field-group">
+      <label for="eventTime">Time (optional)</label>
+      <input type="time" id="eventTime" value="23:59">
+    </div>
+    <div class="actions">
+      <button class="btn" id="startBtn">▶ Start</button>
+      <button class="btn btn-outline" id="resetBtn" style="flex:0.4;">↺</button>
+    </div>
+  </div>
+
+  <!-- warning message -->
+  <div id="warningMessage" class="warning"></div>
+
+  <!-- countdown display -->
+  <div class="countdown-panel">
+    <div id="eventDisplay" class="event-label">🎉 New Year</div>
+    <div class="timer-grid" id="timerGrid">
+      <div class="timer-unit"><div class="number" id="days">--</div><div class="label">days</div></div>
+      <div class="timer-unit"><div class="number" id="hours">--</div><div class="label">hours</div></div>
+      <div class="timer-unit"><div class="number" id="minutes">--</div><div class="label">minutes</div></div>
+      <div class="timer-unit"><div class="number" id="seconds">--</div><div class="label">seconds</div></div>
+    </div>
+    <div id="emptyState" class="empty-state">Set an event and press Start</div>
+  </div>
+
+  <!-- bonus: clear / save (persist) -->
+  <div class="footer-actions">
+    <button class="btn btn-small" id="saveEventBtn">💾 Save event</button>
+    <button class="btn btn-small" id="clearSavedBtn">🗑️ Clear saved</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
